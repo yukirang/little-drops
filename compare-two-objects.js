@@ -38,7 +38,7 @@ const obj1 = {
 const obj2 = {
   name: {
     last: [1, 2, { go: '233', test: false }],
-    first: 'you'
+    first: 'me'
   },
   status: 'alive'
 };
