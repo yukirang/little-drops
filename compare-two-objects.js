@@ -16,9 +16,7 @@ function isSameObject(obj1, obj2) {
         typeof obj1[property] === 'object' &&
         typeof obj2[property] === 'object'
       ) {
-        if (!isSameObject(obj1[property], obj2[property])) {
-          return false;
-        }
+        return isSameObject(obj1[property], obj2[property]);
       } else {
         return false;
       }
