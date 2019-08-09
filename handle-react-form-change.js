@@ -50,10 +50,6 @@ class MyForm extends Component {
             onChange={this.handleChange}
           />
         </div>
-        
-        <div>
-          <textarea value={this.state.comment} name="comment" onChange={this.handleChange} />
-        </div>
     
         <div>
           <input
@@ -101,7 +97,7 @@ class MyForm extends Component {
         <div>
           <span>Travel Document:</span>
           <select
-            value={this.state.favColor}
+            value={this.state.travelDoc}
             onChange={this.handleChange}
             name='favColor'
           >
@@ -111,7 +107,10 @@ class MyForm extends Component {
             <option value='Other'>Other</option>
           </select>
         </div>
-        
+        <div>
+          Comment:
+          <textarea value={this.state.comment} name="comment" onChange={this.handleChange} />
+        </div>
         <button>Submit</button>
       </form>
     );
