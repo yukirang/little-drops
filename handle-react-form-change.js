@@ -99,7 +99,7 @@ class MyForm extends Component {
           <select
             value={this.state.travelDoc}
             onChange={this.handleChange}
-            name='favColor'
+            name='travelDoc'
           >
             <option value='passport'>Passport</option>
             <option value='govId'>ID</option>
