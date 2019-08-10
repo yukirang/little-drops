@@ -1,4 +1,4 @@
-handleFormChange = (e) => {
+handleChange = (e) => {
   const {name,value,type,checked} = e.target;
   type === 'checkbox' ? this.setState({[name]:checked}) : this.setState([name]:value);
 }
