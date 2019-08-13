@@ -1,3 +1,3 @@
 # little-drops
 
-Writing some code snippets that might be reusable:)
+Writing some code snippets including utils and data structures.
