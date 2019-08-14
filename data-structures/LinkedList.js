@@ -168,7 +168,7 @@ class LinkedList {
 }
 
 //Example
-let myLinkedList = new LinkedList();
+const myLinkedList = new LinkedList();
 myLinkedList.append(5);
 myLinkedList.append('hello');
 myLinkedList.prepend(1);
