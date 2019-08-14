@@ -10,6 +10,31 @@ class BinarySearchTree {
   constructor() {
     this.root = null;
   }
+  _findNode(current, value) {
+    if (current === null) return false;
+    if (value === current.value) return current;
+    return value < current.value
+      ? this._findNode(current.left, value)
+      : this._findNode(current.right, value);
+  }
+
+  _getSuccessor(current) {
+    let parent = current;
+    let successor = current.left;
+
+    //Find the left most node in current subtree
+    while (successor.left !== null) {
+      parent = successor;
+      successor = successor.left;
+    }
+
+    //Dealing with the change of successor and its parent
+    parent.left = successor.right;
+    successor.left = current.left;
+    successor.right = current.right;
+
+    return successor;
+  }
 
   insert(value) {
     const newNode = new Node(value);
@@ -106,29 +131,7 @@ class BinarySearchTree {
     return false;
   }
 
-  _findNode(current, value) {
-    if (current === null) return false;
-    if (value === current.value) return current;
-    return value < current.value
-      ? this._findNode(current.left, value)
-      : this._findNode(current.right, value);
-  }
-
-  _getSuccessor(current) {
-    let parent = current;
-    let successor = current.left;
-
-    //Find the left most node in current subtree
-    while (successor.left !== null) {
-      parent = successor;
-      successor = successor.left;
-    }
-
-    //Dealing with the change of successor and its parent
-    parent.left = successor.right;
-    successor.left = current.left;
-    successor.right = current.right;
-
-    return successor;
+  isEmpty() {
+    return this.root === null;
   }
 }
