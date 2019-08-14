@@ -119,7 +119,7 @@ class BinarySearchTree {
     let successor = current.left;
 
     //Find the left most node in current subtree
-    while (successor !== null) {
+    while (successor.left !== null) {
       parent = successor;
       successor = successor.left;
     }
