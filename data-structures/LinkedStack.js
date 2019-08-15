@@ -23,7 +23,7 @@ class Stack {
     return this.stackList.remove(value);
   }
   removeAt(index) {
-    return this.stackList.removeAt();
+    return this.stackList.removeAt(index);
   }
   clear() {
     this.stackList.clear();
